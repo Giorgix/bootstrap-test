@@ -2,17 +2,18 @@ extends layout
 
 block content
   div.container-fluid
-    nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
+    nav.navbar.navbar-inverse.navbar-fixed-top(role="navigation")
       div.navbar-header
         button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse")
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.navbar-brand Brand
+        a.navbar-brand
+          img(alt="Brand" src="images/logo-madtec.svg" height="100%")
 
-      div.collapse.navbar-collapse#navbar-collapse
-        ul.nav.navbar-nav
+      div#navbar-collapse.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
           li.active
             a(href="#") que hacemos
           li
@@ -23,6 +24,14 @@ block content
             a(href="#") contacto
           li
             a(href="#") empezar un proyecto
+  section.front
+      div#video-wrap
+        video#front__video(autoplay preload="true" poster="images/brand.jpg")
+          source(src="/videos/gran-via-sunny.mp4" type="video/mp4")
+          source(src="/videos/gran-via-sunny.webm" type="video/webm")
+          source(src="/videos/gran-via-sunny.ogv" type="video/ogg")
+
+  div.container-fluid
     div.row
       div.col-md-12 COL 12
       div.col-md-12 COL 12
